@@ -65,7 +65,7 @@ while True:
     print(msg)
     print('Enviando...')
     sleep(1)
-    #send_email(subject, msg)
+    send_email(subject, msg)
     c = str(input('Gerar outra senha? [S/N] ')).lower().strip()[0]
     if c == 'n':
         break
