@@ -60,10 +60,10 @@ while True:
             pw = pass_gen3()
         else:
             print('Opção inválida.')
-    print(f'\033[1mUsuário:\033[m {user}\n033[1mSenha:\033[m {pw}') #print usuário e senha para poder conferir
+    print(f'\033[1mUsuário:\033[m {user}\n\033[1mSenha:\033[m {pw}') #print usuário e senha para poder conferir
 
     #Declarando as variaveis para o MIMEText Enviar o e-mail.
-    msg = (f'\033[1mUsuário:\033[m {user}\n033[1mSenha:\033[m {pw}')
+    msg = (f'Usuário: {user} Senha:{pw}')
     TO = config.EMAIL_ADDRESS
     FROM = config.EMAIL_ADDRESS
 
