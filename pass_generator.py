@@ -19,12 +19,12 @@ def send_email(subject, msg):
         print("O Envio do Email falhou.")
 
 def pass_gen1(x = 8, y = 16):
-    characters = string.ascii_letters + string.punctuation + string.digits
+    characters = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(choice(characters)for x in range(randint(x,y)))
     return password
 
 def pass_gen2(x = 8, y = 16):
-    characters = string.ascii_letters + string.punctuation
+    characters = string.ascii_letters + string.digits
     password2 = ''.join(choice(characters)for x in range(randint(x,y)))
     return password2
 
@@ -36,8 +36,8 @@ def pass_gen3(x = 8, y = 16):
 while True:
     subject = str(input('Para qual lugar deseja gerar a senha? '))
     user = str(input('Qual usuário? '))
-    print('''[ 1 ] Caracteres/Pontuação/Símbolos
-[ 2 ] Caracters/Pontuação
+    print('''[ 1 ] Caracteres/Números/Símbolos
+[ 2 ] Caracters/Números
 [ 3 ] Caracters''')
     option = int(input('Qual opção deseja? '))
     try:
@@ -65,7 +65,7 @@ while True:
     print(msg)
     print('Enviando...')
     sleep(1)
-    send_email(subject, msg)
+    #send_email(subject, msg)
     c = str(input('Gerar outra senha? [S/N] ')).lower().strip()[0]
     if c == 'n':
         break
